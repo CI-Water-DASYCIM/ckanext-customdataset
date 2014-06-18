@@ -632,6 +632,7 @@ class ModelPackagePlugin(p.SingletonPlugin, _BaseDataset):
         return schema
 
     def create_package_schema(self):
+        create_model_package_types()
         schema = super(ModelPackagePlugin, self).create_package_schema()
         schema = self._modify_package_schema(schema)
         return schema
